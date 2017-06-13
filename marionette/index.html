@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marionette</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="row">
+  <div class="col-md-12">
+    <div id="breadcrumbs"></div>
+  </div>
+</div>
+<div id="app">
+
+</div>
+<script id="index-template" type="text/html">
+  <h2>Welcome from Marionette</h2>
+  <p>A demo application</p>
+  <ul>
+    <li><a href="#" id="nav-users-index">Users</a></li>
+    <li><a href="#">Roles</a></li>
+  </ul>
+</script>
+<script id="user-layout-template" type="text/html">
+  <div class="row">
+    <div id="summary" class="col-md-3 well"></div>
+    <div id="detail" class="col-md-8"></div>
+  </div>
+</script>
+<script id="summary-template" type="text/html">
+  <h2><%=name%></h2>
+  <img src="<%=gravatarUrl()%>" alt="<%=name%>">
+  <ul>
+    <li>Thing 1</li>
+    <li>Thing 2</li>
+  </ul>
+</script>
+<script id="detail-template" type="text/html">
+
+</script>
+
+<script src="js/vendor/jquery-3.2.1.min.js"></script>
+<script src="js/vendor/underscore-min.js"></script>
+<script src="js/vendor/backbone-min.js"></script>
+<script src="js/vendor/backbone.marionette.min.js"></script>
+
+<script src="js/apps/user-admin/breadcrumb/model.js"></script>
+<script src="js/apps/user-admin/breadcrumb/views.js"></script>
+<script src="js/apps/user-admin/breadcrumb/index.js"></script>
+
+<script src="js/apps/user-admin/user/router.js"></script>
+<script src="js/apps/user-admin/user/model.js"></script>
+<script src="js/apps/user-admin/user/views.js"></script>
+<script src="js/apps/user-admin/user/controller.js"></script>
+<script src="js/apps/user-admin/user/index.js"></script>
+
+<script src="js/apps/user-admin/home/router.js"></script>
+<script src="js/apps/user-admin/home/views.js"></script>
+<script src="js/apps/user-admin/home/controller.js"></script>
+<script src="js/apps/user-admin/home/index.js"></script>
+
+<script src="js/apps/user-admin/index.js"></script>
+<script>
+   $(function () {
+    UserAdmin.start();
+  });
+</script>
+
+</body>
+</html>
